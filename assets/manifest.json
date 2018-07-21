@@ -17,6 +17,6 @@
     }
   },
   "config": {
-    "devUrl": "http://website.test"
+    "devUrl": "http://project-name.test"
   }
 }
