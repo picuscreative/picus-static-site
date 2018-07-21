@@ -1,0 +1,21 @@
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap/scss/_functions.scss";
+@import "../../bower_components/bootstrap/scss/_variables.scss";
+@import "../../bower_components/bootstrap/scss/_mixins.scss";
+@import "../../bower_components/bootstrap/scss/_reboot.scss";
+@import "../../bower_components/bootstrap/scss/_grid.scss";
+@import "../../bower_components/bootstrap/scss/_transitions.scss";
+@import "../../bower_components/bootstrap/scss/_media.scss";
+@import "../../bower_components/bootstrap/scss/_dropdown.scss";
+@import "../../bower_components/bootstrap/scss/_nav.scss";
+@import "../../bower_components/bootstrap/scss/_navbar.scss";
+@import "../../bower_components/bootstrap/scss/_modal.scss";
+@import "../../bower_components/bootstrap/scss/_tables.scss";
+@import "../../bower_components/bootstrap/scss/_utilities.scss";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+// endbower
+
+@import "base/base";
+@import "components/base";
+@import "pages/base";

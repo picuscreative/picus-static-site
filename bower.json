@@ -1,0 +1,37 @@
+{
+  "name": "picus",
+  "homepage": "https://github.com/picuscreative/picus-starter-theme",
+  "authors": ["PICUS <hello@picus.pt>"],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1.0",
+    "slick-carousel": "1.8.0",
+    "jquery-validation": "1.16.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "./scss/_functions.scss",
+        "./scss/_variables.scss",
+        "./scss/_mixins.scss",
+        "./scss/_reboot.scss",
+        "./scss/_grid.scss",
+        "./scss/_transitions.scss",
+        "./scss/_media.scss",
+        "./scss/_dropdown.scss",
+        "./scss/_nav.scss",
+        "./scss/_navbar.scss",
+        "./scss/_modal.scss",
+        "./scss/_tables.scss",
+        "./scss/_utilities.scss",
+        "./js/dist/transition.js",
+        "./js/dist/modal.js",
+        "./js/dist/collapse.js",
+        "./js/dist/tab.js",
+        "./js/dist/util.js"
+      ]
+    }
+  }
+}
