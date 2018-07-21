@@ -19,6 +19,8 @@ const sourcemaps = require('gulp-sourcemaps');
 const uglify = require('gulp-uglify');
 const babel = require('gulp-babel');
 
+const { reload } = browserSync;
+
 // See https://github.com/austinpray/asset-builder
 const manifest = require('asset-builder')('./assets/manifest.json');
 
@@ -28,7 +30,7 @@ const manifest = require('asset-builder')('./assets/manifest.json');
 const path = manifest.paths;
 
 // `config` - Store arbitrary configuration values here.
-const config = manifest.config || {};
+// const config = manifest.config || {};
 
 // `globs` - These ultimately end up in their respective `gulp.src`.
 // - `globs.js` - Array of asset-builder JS dependency objects. Example:
@@ -266,13 +268,11 @@ gulp.task('watch', () => {
   gulp.start('build');
 
   browserSync.init({
-    files: ['{lib,templates}/**/*.php', '*.php'],
-    proxy: config.devUrl,
-    snippetOptions: {
-      whitelist: ['/wp-admin/admin-ajax.php'],
-      blacklist: ['/wp-admin/**'],
+    server: {
+      baseDir: './',
     },
   });
+  gulp.watch(['index.html']).on('change', reload);
   gulp.watch([`${path.source}styles/**/*`], ['styles']);
   gulp.watch([`${path.source}scripts/**/*`], ['scripts']);
   gulp.watch([`${path.source}fonts/**/*`], ['fonts']);
